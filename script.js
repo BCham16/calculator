@@ -56,11 +56,9 @@ function eventAssignment(){
     addToDisplay(1);}
     )
   document.querySelector('#num2').addEventListener('click', function(){
-    
     addToDisplay(2);}
     )
   document.querySelector('#num3').addEventListener('click', function(){
-    
     addToDisplay(3);}
     )
   document.querySelector('#num4').addEventListener('click', function(){
@@ -78,8 +76,7 @@ function eventAssignment(){
   document.querySelector('#num8').addEventListener('click', function(){ 
     addToDisplay(8);}
     )
-  document.querySelector('#num9').addEventListener('click', function(){
-      
+  document.querySelector('#num9').addEventListener('click', function(){    
     addToDisplay(9);}
     )
   document.querySelector('#num0').addEventListener('click', function(){
@@ -105,7 +102,6 @@ function eventAssignment(){
     value1 = complete(value1, operand)
   })
   document.querySelector('#period').addEventListener('click', function(){
-    check()
     if (display.textContent % 1 == 0) addToDisplay('.');}
     )
   document.querySelector('#clear').addEventListener('click', function(){
@@ -125,64 +121,50 @@ function eventAssignment(){
     key = x.key
     switch(key){
       case '1':
-        check(); 
         addToDisplay(1);
         return;
       case '2':
-        check(); 
         addToDisplay(2);
         return;
       case '3':
-        check(); 
         addToDisplay(3);
         return;
       case '4':
-        check(); 
         addToDisplay(4);
         return;
       case '5':
-        check(); 
         addToDisplay(5);
         return;
       case '6':
-        check(); 
         addToDisplay(6);
         return;
       case '7':
-        check(); 
         addToDisplay(7);
         return;
       case '8':
-        check(); 
         addToDisplay(8);
         return;
       case '9':
-        check(); 
         addToDisplay(9);
         return;
       case '0':
-        check(); 
         addToDisplay(0);
         return;
       case '+':
-        value1 = display.textContent
+        value1 = first();
         operand = 'add';
-        tracker = 1;
         return;
       case '-':
-        value1 = display.textContent
+        value1 = first();
         operand = 'subtract';
-        tracker = 1;
         return;
       case '*':
-        value1 = display.textContent
+        value1 = first();
         operand = 'multiply';
-        tracker = 1;
         return;
       case '/':
-        value1 = display.textContent
+        value1 = first();
         operand = 'divide';
-        tracker = 1;
         return;
       case 'Enter':
         value1 = complete(value1, operand);
@@ -191,8 +173,7 @@ function eventAssignment(){
         clearAll()
         return;
       case '.':
-        check();
-        addToDisplay('.');
+        if (display.textContent % 1 == 0) addToDisplay('.');
         return;
       default: return;
     }
