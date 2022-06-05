@@ -17,37 +17,64 @@ equals = document.querySelector('#equals');
 divide = document.querySelector('#divide');
 clear = document.querySelector('#clear');
 
-num1.addEventListener('click', function(){addToDisplay(1)})
-num2.addEventListener('click', function(){addToDisplay(2)})
-num3.addEventListener('click', function(){addToDisplay(3)})
-num4.addEventListener('click', function(){addToDisplay(4)})
-num5.addEventListener('click', function(){addToDisplay(5)})
-num6.addEventListener('click', function(){addToDisplay(6)})
-num7.addEventListener('click', function(){addToDisplay(7)})
-num8.addEventListener('click', function(){addToDisplay(8)})
-num9.addEventListener('click', function(){addToDisplay(9)})
-num0.addEventListener('click', function(){addToDisplay(0)})
+num1.addEventListener('click', function(){
+  check() 
+  addToDisplay(1);})
+num2.addEventListener('click', function(){
+  check() 
+  addToDisplay(2);})
+num3.addEventListener('click', function(){
+  check() 
+  addToDisplay(3);})
+num4.addEventListener('click', function(){
+  check() 
+  addToDisplay(4);})
+num5.addEventListener('click', function(){
+  check() 
+  addToDisplay(5);})
+num6.addEventListener('click', function(){
+  check() 
+  addToDisplay(6);})
+num7.addEventListener('click', function(){
+  check()  
+  addToDisplay(7);})
+num8.addEventListener('click', function(){
+  check()  
+  addToDisplay(8);})
+num9.addEventListener('click', function(){
+  check()  
+  addToDisplay(9);
+  console.log(tracker)})
+num0.addEventListener('click', function(){
+  check()  
+  addToDisplay(0);})
 plus.addEventListener('click', function(){
-  value1 = first()
+  value1 = display.textContent
   operand = 'add';
+  tracker = 1;
 })
 minus.addEventListener('click', function(){
-  value1 = first()
+  value1 = display.textContent
   operand = 'subtract';
+  tracker = 1;
 })
 times.addEventListener('click', function(){
-  value1 = first()
+  value1 = display.textContent
   operand = 'multiply';
+  tracker = 1;
 })
 divide.addEventListener('click', function(){
-  value1 = first()
+  value1 = display.textContent
   operand = 'divide';
+  tracker = 1;
 })
 equals.addEventListener('click', function(){value1 = complete(value1, operand)})
-clear.addEventListener('click', function(){clearAll()})
+clear.addEventListener('click', function(){
+  clearAll()})
 
 let value1 = 0;
 let operand = '';
+let tracker = 0;
 
 function addToDisplay(value){
   display.textContent == 0 ? 
@@ -88,16 +115,23 @@ function complete(value1, operand){
 
 function clearAll(){
   value1 = 0;
-  value2 = 0;
   operand = '';
+  tracker = 0;
   clearDisplay()
 }
 
 function first(){
-  if (value1 !== 0) complete(value1, operand);
+  //if (value1 !== 0) complete(value1, operand);
   value1 = display.textContent
-  clearDisplay();
+  //clearDisplay();
   return value1;
+}
+
+function check(){
+  if (tracker == 1){
+    clearDisplay()
+    tracker = 0;
+  }
 }
 
 clearAll()
