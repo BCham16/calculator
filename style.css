@@ -1,21 +1,24 @@
 html{
-  background: linear-gradient(90deg, rgba(2,0,36,1) 25%, 
-  rgb(150, 150, 150) 50%,
-  rgb(175, 32, 32) 75%);
+  background: rgb(49, 33, 33);
   font-family: 'Orbitron';
 }
 
 .display{
-  border: solid 4px rgb(12, 194, 64);
+  border: solid 2px rgb(12, 194, 64);
   color: rgb(12, 194, 64);
-  background-color: black;
-  width: 250px;
+  box-shadow: 20px 15px 10px rgba(0,0,0,.45);
+  width: 245px;
   font-size: 24px;
   margin: 0 auto;
   margin-top: 7%;
   text-align: right;
   padding-right: 5px;
-  box-shadow: 10px 10px 10px black;
+  background-color: rgba(0,0,0,.35);
+}
+
+#mainDisplay{
+  height: 50px;
+  line-height: 50px;
 }
 
 #memoryDisplay{
@@ -26,37 +29,40 @@ html{
   display: grid;
   grid-template-columns: 60px 60px 60px 60px;
   margin: 0 auto;
-  margin-top: 20px;
-  border-style: inset;
-  border-width: 6px;
+  margin-top: 0px;
+  border-style: solid;
+  border-width: 2px;
   border-color: rgb(12, 194, 64);
+  border-top: none;
   width: 250px;
-  box-shadow: 10px 10px 10px black;
-  background-color: black;
+  box-shadow: 20px 15px 10px black;
+  background-color: rgba(0,0,0,.75);
 }
 
 .calcButtons{
   margin: 8px auto;
   margin-left: 10px;
-  border-style:solid 2px;
+  color: rgb(12, 194, 64);
+  border: none;
   border-radius: 8px;
-  border-color: rgb(12, 194, 64);
   width: 50px;
   height: 50px;
   line-height: 50px;
-  background-color: darkgray;
+  background-color: rgba(0,0,0,0);
   font-size: 18px;
   font-family: 'Orbitron';
   font-weight: 800;
 }
 
-.calcButtons:hover{
-  border-style: solid;
-  border-color: white;
-  box-shadow: 5px 5px 5px rgb(12, 194, 64);
+.operators{
+  color: orange;
 }
 
-.calcButtons:active{
+#clear{
+  color: red;
+}
+
+.calcButtons:hover{
+  border-style: solid;
   border-color: rgb(12, 194, 64);
-  box-shadow: none;
 }
