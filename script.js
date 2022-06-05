@@ -1,5 +1,6 @@
 
 display = document.querySelector('#mainDisplay');
+memoryDisplay = document.querySelector('#memoryDisplay')
 
 let value1 = 0;
 let operand = '';
@@ -15,7 +16,7 @@ function clearDisplay(){
 }
 
 function complete(value1, operand){
-  value2 = display.textContent
+  const value2 = display.textContent
   switch(operand){
     case 'add':
       result = Number(value1) + Number(value2);
@@ -30,9 +31,12 @@ function complete(value1, operand){
       result = Number(value1) / Number(value2);
       break;
     default:
-      result = "error";
+      result = display.textContent;
+      break;
   }
-  display.textContent = result
+  clearAll()
+  tracker = 1;
+  display.textContent = result;
   return Number(result);
 }
 
@@ -114,9 +118,23 @@ function eventAssignment(){
   document.querySelector('#equals').addEventListener('click', function(){
     value1 = complete(value1, operand)
   })
+  document.querySelector('#period').addEventListener('click', function(){
+    check()
+    if (display.textContent % 1 == 0) addToDisplay('.');}
+    )
   document.querySelector('#clear').addEventListener('click', function(){
     clearAll()
   })
+  document.querySelector('#mPlus').addEventListener('click', function(){
+    if (memoryDisplay.textContent == 'Memory') memoryDisplay.textContent = '';
+    memoryDisplay.textContent = display.textContent}
+    )
+  document.querySelector('#mRecall').addEventListener('click', function(){
+    display.textContent = memoryDisplay.textContent}
+    )
+  document.querySelector('#mMinus').addEventListener('click', function(){
+    memoryDisplay.textContent = 'Memory'}
+    )
   document.addEventListener('keypress', function(x){
     key = x.key
     switch(key){
@@ -185,6 +203,10 @@ function eventAssignment(){
         return;
       case 'c':
         clearAll()
+        return;
+      case '.':
+        check();
+        addToDisplay('.');
         return;
       default: return;
     }

@@ -1,22 +1,25 @@
 html{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, 
+  background: linear-gradient(90deg, rgba(2,0,36,1) 25%, 
   rgb(150, 150, 150) 50%,
-  rgb(175, 32, 32) 100%);
-  color: wheat;
-  font-family: Verdana;
+  rgb(175, 32, 32) 75%);
+  font-family: 'Orbitron';
 }
 
 .display{
   border: solid 4px rgb(12, 194, 64);
+  color: rgb(12, 194, 64);
   background-color: black;
   width: 250px;
-  font-family: 'Orbitron', sans-serif;
   font-size: 24px;
   margin: 0 auto;
   margin-top: 7%;
   text-align: right;
   padding-right: 5px;
+  box-shadow: 10px 10px 10px black;
+}
+
+#memoryDisplay{
+  margin-top: 25px;
 }
 
 .container{
@@ -29,29 +32,31 @@ html{
   border-color: rgb(12, 194, 64);
   width: 250px;
   box-shadow: 10px 10px 10px black;
-  background-color: rgb(36, 36, 36);
+  background-color: black;
 }
 
-
 .calcButtons{
-  margin: 5px auto;
+  margin: 8px auto;
   margin-left: 10px;
-  border-style:solid;
+  border-style:solid 2px;
   border-radius: 8px;
+  border-color: rgb(12, 194, 64);
   width: 50px;
   height: 50px;
   line-height: 50px;
   background-color: darkgray;
   font-size: 18px;
+  font-family: 'Orbitron';
+  font-weight: 800;
 }
 
 .calcButtons:hover{
   border-style: solid;
   border-color: white;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px rgb(12, 194, 64);
 }
 
 .calcButtons:active{
-  border-color: green;
+  border-color: rgb(12, 194, 64);
   box-shadow: none;
 }
