@@ -66,3 +66,13 @@ html{
   border-style: solid;
   border-color: rgb(12, 194, 64);
 }
+
+.operators:hover{
+  border-style: solid;
+  border-color: orange;
+}
+
+#clear:hover{
+  border-style: solid;
+  border-color: red;
+}
