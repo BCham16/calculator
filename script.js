@@ -4,7 +4,6 @@ memoryDisplay = document.querySelector('#memoryDisplay')
 
 let value1 = 0;
 let operand = '';
-let tracker = 0;
 
 function addToDisplay(value){
   display.textContent == 0 ? 
@@ -35,7 +34,6 @@ function complete(value1, operand){
       break;
   }
   clearAll()
-  tracker = 1;
   display.textContent = result;
   return Number(result);
 }
@@ -43,77 +41,65 @@ function complete(value1, operand){
 function clearAll(){
   value1 = 0;
   operand = '';
-  tracker = 0;
   clearDisplay()
 }
 
-function check(){
-  if (tracker == 1){
-    clearDisplay()
-    tracker = 0;
-  }
+function first(){
+  if (value1 !== 0) complete(value1, operand);
+  value1 = display.textContent
+  clearDisplay()
+  return value1;
 }
 
 function eventAssignment(){
   document.querySelector('#num1').addEventListener('click', function(){
-    check() 
     addToDisplay(1);}
     )
   document.querySelector('#num2').addEventListener('click', function(){
-    check() 
+    
     addToDisplay(2);}
     )
   document.querySelector('#num3').addEventListener('click', function(){
-    check() 
+    
     addToDisplay(3);}
     )
   document.querySelector('#num4').addEventListener('click', function(){
-    check() 
     addToDisplay(4);}
     )
   document.querySelector('#num5').addEventListener('click', function(){
-    check() 
     addToDisplay(5);}
     )
   document.querySelector('#num6').addEventListener('click', function(){
-    check() 
     addToDisplay(6);}
     )
   document.querySelector('#num7').addEventListener('click', function(){
-    check()  
     addToDisplay(7);}
     )
-  document.querySelector('#num8').addEventListener('click', function(){
-    check()  
+  document.querySelector('#num8').addEventListener('click', function(){ 
     addToDisplay(8);}
     )
   document.querySelector('#num9').addEventListener('click', function(){
-    check()  
+      
     addToDisplay(9);}
     )
   document.querySelector('#num0').addEventListener('click', function(){
-    check()  
     addToDisplay(0);}
     )
   document.querySelector('#plus').addEventListener('click', function(){
-    value1 = display.textContent
+    value1 = first();
     operand = 'add';
-    tracker = 1;
   })
   document.querySelector('#minus').addEventListener('click', function(){
-    value1 = display.textContent
+    value1 = first();
     operand = 'subtract';
-    tracker = 1;
   })
   document.querySelector('#times').addEventListener('click', function(){
-    value1 = display.textContent
+    value1 = first();
     operand = 'multiply';
-    tracker = 1;
   })
   document.querySelector('#divide').addEventListener('click', function(){
-    value1 = display.textContent
-    operand = 'divide';
-    tracker = 1;
+    value1 = first();
+    operand = 'divide'
   })
   document.querySelector('#equals').addEventListener('click', function(){
     value1 = complete(value1, operand)
