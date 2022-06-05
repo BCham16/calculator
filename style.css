@@ -1,11 +1,14 @@
 html{
-  background-color:rgb(15, 31, 60);
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%,
+  rgba(163,188,245,1) 100%);
   color: wheat;
   font-family: Verdana;
 }
 
 .display{
   border: solid 4px rgb(175, 66, 66);
+  background-color: black;
   width: 300px;
   font-size: 24px;
   margin: 0 auto;
@@ -22,12 +25,14 @@ html{
   border-style: inset;
   border-width: 6px;
   width: 250px;
+  box-shadow: 10px 10px 10px black;
 }
 
 
 .calcButtons{
   margin: 5px auto;
   margin-left: 10px;
+  border-style:solid;
   border-radius: 8px;
   width: 50px;
   height: 50px;
@@ -39,4 +44,10 @@ html{
 .calcButtons:hover{
   border-style: solid;
   border-color: white;
+  box-shadow: 5px 5px 5px black;
+}
+
+.calcButtons:active{
+  border-color: green;
+  box-shadow: none;
 }

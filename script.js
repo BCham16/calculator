@@ -94,7 +94,6 @@ function clearAll(){
 }
 
 function first(){
-  x = 0
   if (value1 !== 0) complete(value1, operand);
   value1 = display.textContent
   clearDisplay();
