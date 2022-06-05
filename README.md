@@ -11,6 +11,6 @@
  
   ### Try it live [here](https://codepen.io/bcham16/pen/WNMKZPX)
  
- ##Author
+ ##Author 
  Brandon Chamberlain - Apprentice Software Developer | [LinkedIn](https://www.linkedin.com/in/bchamberlain3618/) | 
  [Personal Website](https://www.thebrandonchamberlain.com)
