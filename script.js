@@ -1,5 +1,5 @@
 
-display = document.querySelector('.display');
+display = document.querySelector('#mainDisplay');
 num1 = document.querySelector('#num1');
 num2 = document.querySelector('#num2');
 num3 = document.querySelector('#num3');
@@ -19,35 +19,44 @@ clear = document.querySelector('#clear');
 
 num1.addEventListener('click', function(){
   check() 
-  addToDisplay(1);})
+  addToDisplay(1);}
+  )
 num2.addEventListener('click', function(){
   check() 
-  addToDisplay(2);})
+  addToDisplay(2);}
+  )
 num3.addEventListener('click', function(){
   check() 
-  addToDisplay(3);})
+  addToDisplay(3);}
+  )
 num4.addEventListener('click', function(){
   check() 
-  addToDisplay(4);})
+  addToDisplay(4);}
+  )
 num5.addEventListener('click', function(){
   check() 
-  addToDisplay(5);})
+  addToDisplay(5);}
+  )
 num6.addEventListener('click', function(){
   check() 
-  addToDisplay(6);})
+  addToDisplay(6);}
+  )
 num7.addEventListener('click', function(){
   check()  
-  addToDisplay(7);})
+  addToDisplay(7);}
+  )
 num8.addEventListener('click', function(){
   check()  
-  addToDisplay(8);})
+  addToDisplay(8);}
+  )
 num9.addEventListener('click', function(){
   check()  
-  addToDisplay(9);
-  console.log(tracker)})
+  addToDisplay(9);}
+  )
 num0.addEventListener('click', function(){
   check()  
-  addToDisplay(0);})
+  addToDisplay(0);}
+  )
 plus.addEventListener('click', function(){
   value1 = display.textContent
   operand = 'add';
@@ -69,8 +78,7 @@ divide.addEventListener('click', function(){
   tracker = 1;
 })
 equals.addEventListener('click', function(){value1 = complete(value1, operand)})
-clear.addEventListener('click', function(){
-  clearAll()})
+clear.addEventListener('click', function(){clearAll()})
 
 let value1 = 0;
 let operand = '';
@@ -83,12 +91,6 @@ function addToDisplay(value){
 
 function clearDisplay(){
   display.textContent = 0
-}
-
-function addition(){
-  value1 = display.textContent
-  clearDisplay();
-  return value1;
 }
 
 function complete(value1, operand){
@@ -120,12 +122,12 @@ function clearAll(){
   clearDisplay()
 }
 
-function first(){
-  //if (value1 !== 0) complete(value1, operand);
-  value1 = display.textContent
-  //clearDisplay();
-  return value1;
-}
+// function first(){
+//   //if (value1 !== 0) complete(value1, operand);
+//   value1 = display.textContent
+//   //clearDisplay();
+//   return value1;
+// }
 
 function check(){
   if (tracker == 1){
