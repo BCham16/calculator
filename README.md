@@ -2,7 +2,7 @@
 
   ### Fully functional Calculator developed in HTML/CSS/JavaScript
   
-![](Screenshot.png)
+ <img src= "Screenshot.png" width="400">
 
  ## Summary
  This was far more intricate than expected. There were a lot of obstacles to overcome to get the display to function properly (show digits in the correct order, 
