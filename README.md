@@ -9,7 +9,7 @@
  leave number on the screen until next number is entered, etc). Functionality was added for both clicking and keyboard entry methods. For this project, I also spent
  more time on design to make it attractive and functional.
  
-  ### Try it live [here](https://codepen.io/bcham16/pen/WNMKZPX)
+  ### Try it live [here](https://bcham16.github.io/calculator/)
  
  ##Author 
  Brandon Chamberlain - Apprentice Software Developer | [LinkedIn](https://www.linkedin.com/in/bchamberlain3618/) | 
